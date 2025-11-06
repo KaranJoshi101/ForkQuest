@@ -6,15 +6,15 @@ We appreciate your interest in contributing to this repository. We welcome contr
 
 1. Fork the repository
 2. Clone it locally
-- `git clone https://github.com/baranwalayush/ForkQuest.git`
+- ```git clone https://github.com/baranwalayush/ForkQuest.git```
 3. Create a new branch for your change:
-- `git checkout -b feature/feature-name`
+- ```git checkout -b feature/feature-name```
 4. Make your changes and commit with a clear message:
 5. Commit you changes
-- `git add .`
-- `git commit -m "commit message"`
+- ```git add .```
+- ```git commit -m "commit message"```
 6. Push your branch:
-- `git push origin feature/feature-name`
+- ```git push origin feature/feature-name```
 7. Create a Pull Request from your forked repository.
 
 ### Code Guidelines
