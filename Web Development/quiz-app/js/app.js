@@ -17,7 +17,7 @@ function setupEventListeners() {
 
 // Load questions from JSON file
 async function loadQuestions() {
-    const response = await fetch('questions.json');
+    const response = await fetch('../quiz-app/data/questions.json');
     questions = await response.json();
     console.log('Questions loaded successfully');
 }
@@ -52,13 +52,17 @@ function displayQuestion() {
     
     // Display options
     const optionsContainer = document.getElementById('options');
-    
+    for(let c of optionsContainer.children){
+        c.classList.add('hidden')
+    }
+
     question.options.forEach((option, index) => {
         const button = document.createElement('button');
         button.className = 'option-btn';
         button.textContent = option;
         button.addEventListener('click', () => selectAnswer(index));
         optionsContainer.appendChild(button);
+
     });
 }
 
