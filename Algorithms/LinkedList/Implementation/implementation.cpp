@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+
 using namespace std;
 
 // Node structure
@@ -34,7 +35,7 @@ public:
 
 
 
-    // Insert at tail
+    //Insert at tail
     void insertAtTail(int val) {
         ListNode* newNode = new ListNode(val);
         if (head == nullptr) {
@@ -52,30 +53,49 @@ public:
 
     // Delete a node by value
     void deleteNode(int val) {
-
-
-
-
+        ListNode* temp=head;
+        ListNode* c=temp;
+        ListNode* d=NULL;
+        while(temp->data!=val){
+            c=temp;
+            temp=temp->next;
+        }
+        d=temp->next;
+        c->next=d;
+        delete temp;
     }
 
 
 
 
     // Delete a node by index
-    int deleteNodebyIndex(int index){
-
-        
-
-
+    void deleteNodebyIndex(int index){
+        ListNode* temp=head;
+        ListNode* c=temp;
+        ListNode* d=NULL;
+        if(index==0){
+            if(temp->next!=NULL)
+                head=temp->next;
+            
+        }else{
+            for(int i=0; i<index; i++){
+                c=temp;
+                temp=temp->next;
+            }
+            d=temp->next;
+            c->next=d;
+            delete temp;
+        }
     }
 
 
 
     // Display list elements
     void display() {
-        Node temp = head;
+        ListNode* temp = head;
         while (temp != nullptr) {
             cout << temp->data << " ";
+            temp=temp->next;
         }
         cout << endl;
     }
