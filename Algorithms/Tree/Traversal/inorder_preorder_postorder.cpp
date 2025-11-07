@@ -21,6 +21,12 @@ void preorder(TreeNode* root) {
 
 void postorder(TreeNode* root) {
     // postorder
+    if(root){
+        postorder(root->left);
+        postorder(root->right);
+        cout<<root->val;
+    }
+    return;
 }
 
 int main() {
